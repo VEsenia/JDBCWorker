@@ -14,4 +14,5 @@ public class Connector {
     static final String DB_URL = "jdbc:postgresql://localhost:5432/users";
     static final String USER = "tester";
     static final String PASS = "tester";
+    static final String fileName = "error.log";
 }
