@@ -7,27 +7,32 @@ public class Main {
     public static void main(String[] args) {
         try
         {
+            try {
+                SQLWorker.deleteUser(20);
+            }
+            catch (DataException ex)
+            {
+                FileWorker.WriteError(ex.getMessage(), ex.getCause());
+            }
+            try {
+                SQLWorker.editUser(15, "surname", "test777");
+            }
+            catch(DataException ex)
+            {
+                FileWorker.WriteError(ex.getMessage(), ex.getCause());
+            }
+            try {
+                SQLWorker.addUser("tes666", "Калинина", "Сноу", "test", "123");
+            }
+            catch(DataException ex)
+            {
+                FileWorker.WriteError(ex.getMessage(), ex.getCause());
+            }
             SQLWorker.getUsers();
-            try {
-                SQLWorker.deleteUser(1);
-            }
-            catch (DataException exp)
-            {
-                FileWorker.WriteError(exp.getMessage());
-            }
-
-            try {
-                SQLWorker.editUser(1, "surname", "test");
-            }
-            catch(DataException exp)
-            {
-                FileWorker.WriteError(exp.getMessage());
-            }
-            SQLWorker.addUser("Вера", "Калинина", "Сноу", "Hellow", "123");
         }
         catch(SQLException ex)
         {
-            FileWorker.WriteError(ex.getMessage());
+            FileWorker.WriteError(ex.getMessage(), ex.getCause());
         }
     }
 }

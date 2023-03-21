@@ -11,16 +11,7 @@ public class DataErrors {
     }
 
     //почему нельзя сделать private?
-    public static class ErrorStruct
-    {
-        public String name;
-        public int number;
 
-        public ErrorStruct(String name, int number) {
-            this.name = name;
-            this.number = number;
-        }
-    }
     public static ErrorStruct deleteError = new ErrorStruct("Нет записи для удаления по id=", 0);
     public static ErrorStruct updateError = new ErrorStruct("Не найдена запись для обновления по id=", 1);;
 }
