@@ -1,4 +1,4 @@
-package org.chepkasovavv;
+package org.chepkasovavv.Users;
 
 public class DataErrors {
     private static final DataErrors instance = new DataErrors();
