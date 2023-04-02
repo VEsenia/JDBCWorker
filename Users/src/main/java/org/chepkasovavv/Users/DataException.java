@@ -1,4 +1,4 @@
-package org.chepkasovavv;
+package org.chepkasovavv.Users;
 
 public class DataException extends Exception{
     private int number;

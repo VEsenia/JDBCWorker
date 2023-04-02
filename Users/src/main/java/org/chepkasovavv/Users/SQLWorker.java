@@ -1,10 +1,8 @@
-package org.chepkasovavv;
+package org.chepkasovavv.Users;
 
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Timer;
 
 public class SQLWorker {
 
